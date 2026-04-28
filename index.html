@@ -1,101 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Data</title>
 </head>
 <body>
-    <h1 class="judul">Form Data Mahasiswa</h1>
-    <form class="input-data">
-        <div class="textInputWrapper">
-            <label>Nama</label>
-            <input placeholder="Type Here" type="text" class="textInput">
-        </div>
+    <!-- <h1>Data Mahasiswa</h1> -->
+    <div class="form-card">
+        <h2>Form Input</h2>
+        <form class="grid-form">
+            <div class="form-grp">
+                <label>Nama</label>
+                <input type="text"placeholder="Input Nama" required>
+            </div>
+            <div class="form-grp">
+                <label>NIM</label>
+                <input type="text" required placeholder="Input Nim">
+            </div>
+            <div class="form-grp">
+                <label>Alamat</label>
+                <input type="text" required placeholder="Input Alamat">
+            </div>
+            <div class="form-grp">
+                <label>Tanggal Lahir</label>
+                <input type="date" required>
+            </div>
+            <div class="form-grp">
+                <label>Password</label>
+                <input type="password" required placeholder="Input Password">
+            </div>
+            <div class="form-grp">
+                <label>Jenis Kelamin</label>
+                <div class="radio-grp">
+                    <input type="radio" name="gender" id="Pria" value="pria">
+                    <label for="Pria">Pria</label>
 
-        <div class="textInputWrapper">
-            <label>NIM</label>
-            <input placeholder="Type Here" type="text" class="textInput">
-        </div>
+                    <input type="radio" name="gender" id="wanita" value="wanita">
+                    <label for="wanita">Wanita</label>
 
-        <div class="textInputWrapper">
-            <label>Alamat</label>
-            <input placeholder="Type Here" type="text" class="textInput">
-        </div>
+                    <input type="radio" name="gender" id="heli" value="heli">
+                    <label for="heli">helikopter</label>
+                </div>
+            </div>
 
-        <div class="textInputWrapper">
-            <label>Password</label>
-            <input placeholder="Type Here" type="password" class="textInput">
-        </div>
+            <div class="btn-grp">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+    </div>
 
-        <div class="textInputWrapper">
-            <label>Tanggal Lahir</label>
-            <input placeholder="Type Here" type="date" class="textInput">
-        </div>
-
-        
-        <div class="textInputWrapper">
-            <label class="jk">Jenis Kelamin</label>
-            <div class="radio-btn">
-                <input type="radio" name="Gender" value="Pria" id="gender-pria" class="gender">
-                <label for="gender-pria">Pria</label>
+    <div class="table-card">
+        <h2>Table Data</h2>
+        <search>
+            <div class="table-head">
                 
             </div>
-            <div class="radio-btn">
-                <input type="radio" name="Gender" value="Wanita" id="gender-wanita" class="gender">
-                <label for="gender-wanita">Wanita</label>
-            </div>
-        </div>
-
-        <div class="btn-action">
-            <button class="Submit">Submit</button>
-            <button class="Reset">Reset</button>
-        </div>
-    </form>
-    
-
-    <h1 class="judul">Table Data Mahasiswa</h1>
-   <table>
-    <div class="search-container">
-        <search>
             <div class="search-container">
                 <form action="/search-results" method="get" class="search-form">
                     <div class="input-wrapper">
                         <input type="search" id="data-search" name="q" placeholder="Cari NIM atau Nama Mahasiswa...">
                     </div>
                 </form>
-            </div> 
+            </div>
         </search>
+        <div class="table-wrap">
+            <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Tanggal lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Password</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                </tbody>
+        </table>
+        </div>
+        <div class="pagination">
+            <div class="pagination-info" id="pagination-info"></div>
+            <div class="pagination-controls" id="pagination-numbers"></div>
+        </div>
     </div>
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>Tanggal lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Password</th>
-            <th>Aksi</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>202412023</td>
-            <td>Kintaro</td>
-            <td>Loktuan</td>
-            <td>12/05/2005</td> 
-            <td>Pria</td>
-            <td>********</td> <td>
-                <a href="edit_data.html">
-                    <img src="edit.png" alt="Edit" width="20">
-                </a>
-                <a href="hapus_data.php?id=1">
-                    <img src="trash.png" alt="Hapus" width="20">
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
 </body>
+<script src="script.js" defer></script>
 </html>
