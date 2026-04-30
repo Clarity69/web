@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="judul">Form Data Mahasiswa</h1>
+    <form class="input-data">
+        <div class="textInputWrapper">
+            <label>Nama</label>
+            <input placeholder="Type Here" type="text" class="textInput">
+        </div>
+
+        <div class="textInputWrapper">
+            <label>NIM</label>
+            <input placeholder="Type Here" type="text" class="textInput">
+        </div>
+
+        <div class="textInputWrapper">
+            <label>Alamat</label>
+            <input placeholder="Type Here" type="text" class="textInput">
+        </div>
+
+        <div class="textInputWrapper">
+            <label>Password</label>
+            <input placeholder="Type Here" type="password" class="textInput">
+        </div>
+
+        <div class="textInputWrapper">
+            <label>Tanggal Lahir</label>
+            <input placeholder="Type Here" type="date" class="textInput">
+        </div>
+
+        
+        <div class="textInputWrapper">
+            <label class="jk">Jenis Kelamin</label>
+            <div class="radio-btn">
+                <input type="radio" name="Gender" value="Pria" id="gender-pria" class="gender">
+                <label for="gender-pria">Pria</label>
+                
+            </div>
+            <div class="radio-btn">
+                <input type="radio" name="Gender" value="Wanita" id="gender-wanita" class="gender">
+                <label for="gender-wanita">Wanita</label>
+            </div>
+        </div>
+
+        <div class="btn-action">
+            <button class="Submit">Submit</button>
+            <button class="Reset">Reset</button>
+        </div>
+    </form>
+    
+
+    <h1 class="judul">Table Data Mahasiswa</h1>
+   <table>
+    <div class="search-container">
+        <search>
+            <div class="search-container">
+                <form action="/search-results" method="get" class="search-form">
+                    <div class="input-wrapper">
+                        <input type="search" id="data-search" name="q" placeholder="Cari NIM atau Nama Mahasiswa...">
+                    </div>
+                </form>
+            </div> 
+        </search>
+    </div>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Tanggal lahir</th>
+            <th>Jenis Kelamin</th>
+            <th>Password</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>202412023</td>
+            <td>Kintaro</td>
+            <td>Loktuan</td>
+            <td>12/05/2005</td> 
+            <td>Pria</td>
+            <td>********</td> <td>
+                <a href="edit_data.html">
+                    <img src="edit.png" alt="Edit" width="20">
+                </a>
+                <a href="hapus_data.php?id=1">
+                    <img src="trash.png" alt="Hapus" width="20">
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
