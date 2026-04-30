@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data</title>
+</head>
+<body>
+    <!-- <h1>Data Mahasiswa</h1> -->
+    <div class="form-card">
+        <h2>Form Input</h2>
+        <form class="grid-form">
+            <div class="form-grp">
+                <label>Nama</label>
+                <input type="text"placeholder="Input Nama" required>
+            </div>
+            <div class="form-grp">
+                <label>NIM</label>
+                <input type="text" required placeholder="Input Nim">
+            </div>
+            <div class="form-grp">
+                <label>Alamat</label>
+                <input type="text" required placeholder="Input Alamat">
+            </div>
+            <div class="form-grp">
+                <label>Tanggal Lahir</label>
+                <input type="date" required>
+            </div>
+            <div class="form-grp">
+                <label>Password</label>
+                <input type="password" required placeholder="Input Password">
+            </div>
+            <div class="form-grp">
+                <label>Jenis Kelamin</label>
+                <div class="radio-grp">
+                    <input type="radio" name="gender" id="Pria" value="pria">
+                    <label for="Pria">Pria</label>
+
+                    <input type="radio" name="gender" id="wanita" value="wanita">
+                    <label for="wanita">Wanita</label>
+
+                    <input type="radio" name="gender" id="heli" value="heli">
+                    <label for="heli">helikopter</label>
+                </div>
+            </div>
+
+            <div class="btn-grp">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-card">
+        <h2>Table Data</h2>
+        <search>
+            <div class="table-head">
+                
+            </div>
+            <div class="search-container">
+                <form action="/search-results" method="get" class="search-form">
+                    <div class="input-wrapper">
+                        <input type="search" id="data-search" name="q" placeholder="Cari NIM atau Nama Mahasiswa...">
+                    </div>
+                </form>
+            </div>
+        </search>
+        <div class="table-wrap">
+            <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Tanggal lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Password</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                </tbody>
+        </table>
+        </div>
+        <div class="pagination">
+            <div class="pagination-info" id="pagination-info"></div>
+            <div class="pagination-controls" id="pagination-numbers"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js" defer></script>
+</html>
